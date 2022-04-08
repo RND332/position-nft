@@ -1,14 +1,14 @@
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.12;
+//SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0;
 
-import '@openzeppelin/contracts/access/Ownable.sol';
+import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 
 abstract contract AdminAccess is Ownable {
 
     mapping(address => bool) admins;
 
     modifier onlyAdminOrOwner() {
-        require(isAdmin(msg.sender) || owner() == msg.sender);
+        require(isAdmin(msg.sender) || owner() == msg.sender, "AdminAccess: restricted to admin or owner only");
         _;
     }
 

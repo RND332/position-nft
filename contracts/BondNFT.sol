@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.12;
+pragma solidity ^0.8.12;
 
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
@@ -9,9 +9,10 @@ import './libraries/NFTDescriptor.sol';
 import './libraries/BokkyPooBahsDateTimeLibrary.sol';
 import './libraries/HexStrings.sol';
 import './interfaces/IBondStorage.sol';
-import './interfaces/AdminAccess.sol';
+import './access/AdminAccess.sol';
+import './Whitelist.sol';
 
-contract GTONpoapNFT is NFT, IPoapStorage, AdminAccess {
+contract GTONpoapNFT is NFT, IPoapStorage, AdminAccess, Whitelist {
     using SafeERC20 for IERC20;
     using Strings for uint256;
 
@@ -37,6 +38,8 @@ contract GTONpoapNFT is NFT, IPoapStorage, AdminAccess {
 
         tokenId = _safeMint(to, "");
         userIds[to].push(tokenId);
+
+        setWhitelist(msg.sender, false);
     }
 
     function transfer(address to, uint tokenId) public {
@@ -62,6 +65,4 @@ contract GTONpoapNFT is NFT, IPoapStorage, AdminAccess {
                 })
             );
     }
-
-    function mint(address to) external override returns (uint) {}
 }

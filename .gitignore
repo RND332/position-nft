@@ -1,5 +1,6 @@
 node_modules
 package-lock.json
+abi
 .DS_Store
 .env
 coverage
@@ -9,3 +10,29 @@ typechain
 #Hardhat files
 cache
 artifacts
+abi/@openzeppelin/contracts/access/Ownable.sol/Ownable.js
+abi/@openzeppelin/contracts/access/Ownable.sol/Ownable.json
+abi/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.js
+abi/@openzeppelin/contracts/token/ERC20/IERC20.sol/IERC20.json
+abi/@openzeppelin/contracts/token/ERC721/ERC721.sol/ERC721.js
+abi/@openzeppelin/contracts/token/ERC721/ERC721.sol/ERC721.json
+abi/@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol/ERC721Burnable.js
+abi/@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol/ERC721Burnable.json
+abi/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol/IERC721Metadata.js
+abi/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol/IERC721Metadata.json
+abi/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.js
+abi/@openzeppelin/contracts/token/ERC721/IERC721.sol/IERC721.json
+abi/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol/IERC721Receiver.js
+abi/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol/IERC721Receiver.json
+abi/@openzeppelin/contracts/utils/introspection/ERC165.sol/ERC165.js
+abi/@openzeppelin/contracts/utils/introspection/ERC165.sol/ERC165.json
+abi/@openzeppelin/contracts/utils/introspection/IERC165.sol/IERC165.js
+abi/@openzeppelin/contracts/utils/introspection/IERC165.sol/IERC165.json
+abi/contracts/BondNFT.sol/GTONpoapNFT.js
+abi/contracts/BondNFT.sol/GTONpoapNFT.json
+abi/contracts/interfaces/IBondStorage.sol/IPoapStorage.js
+abi/contracts/interfaces/IBondStorage.sol/IPoapStorage.json
+abi/contracts/libraries/NFTDescriptor.sol/NFTDescriptor.js
+abi/contracts/libraries/NFTDescriptor.sol/NFTDescriptor.json
+abi/contracts/NFT.sol/NFT.js
+abi/contracts/NFT.sol/NFT.json
