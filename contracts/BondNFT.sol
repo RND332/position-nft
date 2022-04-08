@@ -33,6 +33,8 @@ contract GTONpoapNFT is NFT, IPoapStorage, AdminAccess {
 
     /* ========== MUTATIVE FUNCTIONS ========== */
     function mint(address to) public onlyAdminOrOwner returns (uint tokenId) {
+        require(isWhitelisted(msg.sender));
+
         tokenId = _safeMint(to, "");
         userIds[to].push(tokenId);
     }
